@@ -2,16 +2,16 @@ let archives = {
             'Quiz': [
                 { title: 'Quiz 1', score: '17/20', fileName: 'quiz1.jpg', proofSrc: 'quiz1.jpg', date: '02/26/2026' },
                 { title: 'Quiz 2', score: '19/20', fileName: 'quiz2.jpg', proofSrc: 'quiz2.jpg', date: '02/26/2026' },
-                { title: 'Quiz 3', score: '4/20', fileName: 'N/A', proofSrc: 'placeholder.png', date: '01/22/2026' },
+                { title: 'Quiz 3', score: '/20', fileName: 'N/A', proofSrc: 'placeholder.jpg', date: '01/22/2026' },
                 { title: 'Long Quiz', score: '43/45', fileName: 'longquiz1.jpg', proofSrc: 'longquiz1.jpg', date: '04/08/2026' }
             ],
             'Lab': [
-                { title: 'Lab 1', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.png', date: '01/12/2026' },
-                { title: 'Lab 2', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.png', date: '01/20/2026' }
+                { title: 'Lab 1', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.jpg', date: '01/12/2026' },
+                { title: 'Lab 2', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.jpg', date: '01/20/2026' }
             ],
             'Exam': [
-                { title: 'Midterm Exam', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.png', date: '04/16/2026' },
-                { title: 'Finals Exam', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.png', date: 'N/A' }
+                { title: 'Midterm Exam', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.jpg', date: '04/16/2026' },
+                { title: 'Finals Exam', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.jpg', date: 'N/A' }
             ]
         };
 
@@ -38,26 +38,27 @@ let archives = {
             const pre = cat.toLowerCase();
             const t = document.getElementById(pre + '-title');
             const s = document.getElementById(pre + '-score');
-            const f = document.getElementById(pre + '-filename');
             const p = document.getElementById(pre + '-proof');
 
-            if (!p.files || !p.files) {
-                alert("Please select an image");
+            if (!p.files || !p.files[0]) {
+                alert("Please select an image.");
                 return;
             }
 
-            const imgUrl = URL.createObjectURL(p.files);
+            const file = p.files[0];
+            const imgUrl = URL.createObjectURL(file);
+
             archives[cat].push({
-                title: t.value || "Untitled",
-                score: s.value || "N/A",
-                fileName: f.value || p.files.name,
+                title: t.value.trim() || "Untitled",
+                score: s.value.trim() || "N/A",
+                fileName: file.name,
                 proofSrc: imgUrl,
                 date: new Date().toLocaleDateString()
             });
 
             updateDashboard(cat);
             showPage('dashboard');
-            t.value = ""; s.value = ""; f.value = ""; p.value = "";
+            t.value = ""; s.value = ""; p.value = "";
         }
 
         function updateDashboard(cat) {
