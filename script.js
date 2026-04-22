@@ -2,16 +2,16 @@ let archives = {
             'Quiz': [
                 { title: 'Quiz 1', score: '17/20', fileName: 'quiz1.jpg', proofSrc: 'quiz1.jpg', date: '02/26/2026' },
                 { title: 'Quiz 2', score: '19/20', fileName: 'quiz2.jpg', proofSrc: 'quiz2.jpg', date: '02/26/2026' },
-                { title: 'Quiz 3', score: '5/20', fileName: 'N/A', proofSrc: 'placeholder.png', date: '01/22/2026' },
+                { title: 'Quiz 3', score: '4/20', fileName: 'N/A', proofSrc: 'placeholder.jpg', date: '01/22/2026' },
                 { title: 'Long Quiz', score: '43/45', fileName: 'longquiz1.jpg', proofSrc: 'longquiz1.jpg', date: '04/08/2026' }
             ],
             'Lab': [
-                { title: 'Lab 1', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.png', date: '01/12/2026' },
-                { title: 'Lab 2', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.png', date: '01/20/2026' }
+                { title: 'Lab 1', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.jpg', date: '01/12/2026' },
+                { title: 'Lab 2', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.jpg', date: '01/20/2026' }
             ],
             'Exam': [
-                { title: 'Midterm Exam', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.png', date: '04/16/2026' },
-                { title: 'Finals Exam', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.png', date: 'N/A' }
+                { title: 'Midterm Exam', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.jpg', date: '04/16/2026' },
+                { title: 'Finals Exam', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.jpg', date: 'N/A' }
             ]
         };
 
