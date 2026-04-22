@@ -6,12 +6,12 @@ let archives = {
                 { title: 'Long Quiz', score: '43/45', fileName: 'longquiz1.jpg', proofSrc: 'longquiz1.jpg', date: '04/08/2026' }
             ],
             'Lab': [
-                { title: 'Lab 1', score: '100/100', fileName: 'N/A', proofSrc: 'placeholder.png', date: '01/12/2026' },
-                { title: 'Lab 2', score: '95/100', fileName: 'N/A', proofSrc: 'placeholder.png', date: '01/20/2026' }
+                { title: 'Lab 1', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.png', date: '01/12/2026' },
+                { title: 'Lab 2', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.png', date: '01/20/2026' }
             ],
             'Exam': [
-                { title: 'Midterm Exam', score: '85/100', fileName: 'N/A', proofSrc: 'placeholder.png', date: '04/16/2026' },
-                { title: 'Finals Exam', score: 'PENDING', fileName: 'N/A', proofSrc: 'placeholder.png', date: 'N/A' }
+                { title: 'Midterm Exam', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.png', date: '04/16/2026' },
+                { title: 'Finals Exam', score: 'N/A', fileName: 'N/A', proofSrc: 'placeholder.png', date: 'N/A' }
             ]
         };
 
