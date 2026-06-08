@@ -13,19 +13,17 @@
         <img class="modal-content" id="modalImg">
     </div>
 
-    <aside>
-        <div class="nav-logo">ITEC 50 - PORTFOLIO</div>
+    <header>
+        <div class="nav-logo">PORTFOLIO</div>
         <nav>
-            <ul>
-                <li><a onclick="showPage('home')" id="link-home" class="active">Home</a></li>
-                <li><a onclick="showPage('dashboard')" id="link-dashboard">Dashboard</a></li>
-                <li><hr class="nav-divider"></li>
-                <li><a onclick="showPage('quiz')" id="link-quiz">Quiz Upload</a></li>
-                <li><a onclick="showPage('lab')" id="link-lab">Lab Upload</a></li>
-                <li><a onclick="showPage('exam')" id="link-exam">Exam Upload</a></li>
-            </ul>
+            <a onclick="showPage('home')" id="link-home" class="nav-icon-btn active" title="About Me">
+                <img src="home.png" alt="Home" class="nav-icon-img">
+            </a>
+            <a onclick="showPage('dashboard')" id="link-dashboard" class="nav-icon-btn" title="Dashboard">
+                <img src="dashboard.png" alt="Dashboard" class="nav-icon-img">
+            </a>
         </nav>
-    </aside>
+    </header>
 
     <main>
         <section id="home" class="page active">
@@ -33,16 +31,86 @@
                 <img src="profile.jpg" alt="Profile" class="profile-pic">
                 <div>
                     <h1>John Rainier D. Herente</h1>
-                    <p class="sub-text">BSCS-1A | Student Portfolio</p>
-                    <p class="bio">I am currently 18 years old. I like to play games, listen to music, and watch movies.</p>
+                    <p class="sub-text">BSCS-1A | CvSU</p>
+                    <p class="bio">Welcome to my student portfolio, here you'll see all of the informations about myself :D</p>
                     <div class="tags">
                         <span class="skill-tag">C++</span>
                         <span class="skill-tag">Java</span>
-                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
                         <span class="skill-tag">JavaScript</span>
                     </div>
                 </div>
             </div>
+                
+            <div class="two-col-sections">
+
+                <div class="edu-section">
+                    <h2 class="section-title">EDUCATIONAL BACKGROUND</h2>
+                    <div class="edu-timeline">
+
+                        <div class="edu-entry">
+                            <div class="edu-dot"></div>
+                            <div class="edu-content">
+                                <p class="edu-year">2025 – Present</p>
+                                <p class="edu-school">Cavite State University - Silang Campus</p>
+                                <p class="edu-degree">Bachelor of Science in Computer Science</p>
+                                <p class="edu-desc">Currently enrolled</p>
+                            </div>
+                        </div>
+
+                        <div class="edu-entry">
+                            <div class="edu-dot"></div>
+                            <div class="edu-content">
+                                <p class="edu-year">2023 – 2025</p>
+                                <p class="edu-school">Philippine Christian University - Dasmariñas</p>
+                                <p class="edu-degree">STEM Strand</p>
+                                <p class="edu-desc">Graduated With Honors</p>
+                            </div>
+                        </div>
+
+                        <div class="edu-entry">
+                            <div class="edu-dot"></div>
+                            <div class="edu-content">
+                                <p class="edu-year">2019 – 2023</p>
+                                <p class="edu-school">Emilia Ambalada Poblete Integrated High School</p>
+                                <p class="edu-degree">Junior High School</p>
+                                <p class="edu-desc">Graduated</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="edu-section">
+                    <h2 class="section-title">SECTION TITLE HERE</h2>
+                    <div class="edu-timeline">
+
+                        <div class="edu-entry">
+                            <div class="edu-dot"></div>
+                            <div class="edu-content">
+                                <p class="edu-year">Year – Year</p>
+                                <p class="edu-school">Title here</p>
+                                <p class="edu-degree">Subtitle here</p>
+                                <p class="edu-desc">Description here</p>
+                            </div>
+                        </div>
+
+                        <div class="edu-entry">
+                            <div class="edu-dot"></div>
+                            <div class="edu-content">
+                                <p class="edu-year">Year – Year</p>
+                                <p class="edu-school">Title here</p>
+                                <p class="edu-degree">Subtitle here</p>
+                                <p class="edu-desc">Description here</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+                
         </section>
 
         <section id="dashboard" class="page">
@@ -53,15 +121,45 @@
                 <div class="stat-box exam-border"><h3>Exams</h3><p id="count-Exam">0</p></div>
             </div>
             <div class="category-lists">
-                <div><h3 class="cat-label quiz-txt">Quizzes</h3><div id="list-Quiz" class="grid-display"></div></div>
-                <div><h3 class="cat-label lab-txt">Laboratories</h3><div id="list-Lab" class="grid-display"></div></div>
-                <div><h3 class="cat-label exam-txt">Major Exams</h3><div id="list-Exam" class="grid-display"></div></div>
+                <div>
+                    <div class="cat-header">
+                        <h3 class="cat-label quiz-txt">Quizzes</h3>
+                        <button class="upload-icon-btn quiz-icon" onclick="showPage('quiz')" title="Add Quiz">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                            Upload
+                        </button>
+                    </div>
+                    <div id="list-Quiz" class="grid-display"></div>
+                </div>
+                <div>
+                    <div class="cat-header">
+                        <h3 class="cat-label lab-txt">Laboratories</h3>
+                        <button class="upload-icon-btn lab-icon" onclick="showPage('lab')" title="Add Lab">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                            Upload
+                        </button>
+                    </div>
+                    <div id="list-Lab" class="grid-display"></div>
+                </div>
+                <div>
+                    <div class="cat-header">
+                        <h3 class="cat-label exam-txt">Major Exams</h3>
+                        <button class="upload-icon-btn exam-icon" onclick="showPage('exam')" title="Add Exam">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                            Upload
+                        </button>
+                    </div>
+                    <div id="list-Exam" class="grid-display"></div>
+                </div>
             </div>
         </section>
 
         <section id="quiz" class="page">
             <div class="upload-container">
-                <h2>Add Quiz</h2>
+                <div class="upload-header">
+                    <h2>Add Quiz</h2>
+                    <button class="back-btn" onclick="showPage('dashboard')">← Back to Dashboard</button>
+                </div>
                 <div class="form-group">
                     <label>Title</label>
                     <input type="text" id="quiz-title" placeholder="e.g. Quiz 5">
@@ -76,7 +174,10 @@
 
         <section id="lab" class="page">
             <div class="upload-container">
-                <h2>Add Lab</h2>
+                <div class="upload-header">
+                    <h2>Add Lab</h2>
+                    <button class="back-btn" onclick="showPage('dashboard')">← Back to Dashboard</button>
+                </div>
                 <div class="form-group">
                     <label>Title</label>
                     <input type="text" id="lab-title" placeholder="e.g. Lab 3">
@@ -91,7 +192,10 @@
 
         <section id="exam" class="page">
             <div class="upload-container">
-                <h2>Add Exam</h2>
+                <div class="upload-header">
+                    <h2>Add Exam</h2>
+                    <button class="back-btn" onclick="showPage('dashboard')">← Back to Dashboard</button>
+                </div>
                 <div class="form-group">
                     <label>Title</label>
                     <input type="text" id="exam-title" placeholder="e.g. Finals Exam">
