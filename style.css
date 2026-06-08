@@ -67,7 +67,7 @@ input[type="text"] { width: 100%; padding: 12px; background: #191b19; border: 1p
 .edu-timeline { display: flex; flex-direction: column; gap: 0; padding-left: 10px; border-left: 2px solid #363a36; margin-left: 10px; }
 .edu-entry { position: relative; padding: 0 0 28px 24px; }
 .edu-entry:last-child { padding-bottom: 0; }
-.edu-dot { position: absolute; left: -8px; top: 4px; width: 14px; height: 14px; background: white; border-radius: 50%; border: 2px solid #191b19; }
+.edu-dot { position: absolute; left: 0px; top: 4px; width: 14px; height: 14px; background: white; border-radius: 50%; border: 2px solid #191b19; }
 .edu-year { font-size: 0.78rem; color: #888; margin-bottom: 4px; }
 .edu-school { color: white; font-size: 1rem; font-weight: bold; }
 .edu-degree { color: #aaa; font-size: 0.85rem; margin-top: 2px; }
