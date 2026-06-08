@@ -24,7 +24,7 @@ let archives = {
         function showPage(pageId) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
-            document.querySelectorAll('nav ul li a').forEach(a => a.classList.remove('active'));
+            document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
             const link = document.getElementById('link-' + pageId);
             if(link) link.classList.add('active');
         }

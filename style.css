@@ -1,28 +1,24 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Franklin Gothic Medium', Arial, sans-serif; }
 body { background-color: #191b19; color: white; line-height: 1.6; display: flex; flex-direction: column; }
 
-/* ── Top Navbar ─────────────────────────── */
-header { width: 100%; background-color: #272927; border-bottom: 1px solid #363a36; padding: 0 40px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; left: 0; z-index: 100; }
-.nav-logo { font-size: 1.2rem; font-weight: bold; color: white; letter-spacing: 2px; }
+header { width: 100%; background-color: #272927; border-bottom: 1px solid #363a36; padding: 0 40px; height: 60px; display: flex; align-items: center; justify-content: left; position: fixed; top: 0; left: 0; z-index: 100; }
 nav { display: flex; align-items: center; gap: 8px; }
 .nav-icon-btn { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px; cursor: pointer; transition: 0.2s; padding: 8px; }
 .nav-icon-btn:hover, .nav-icon-btn.active { background-color: #363a36; }
 .nav-icon-img { width: 20px; height: 20px; object-fit: contain; filter: invert(1) opacity(0.6); transition: 0.2s; }
 .nav-icon-btn:hover .nav-icon-img, .nav-icon-btn.active .nav-icon-img { filter: invert(1) opacity(1); }
 
-/* ── Main content ───────────────────────── */
 main { margin-top: 60px; width: 100%; padding: 40px; }
 .page { display: none; }
 .page.active { display: block; }
 
-/* ── Profile ────────────────────────────── */
 .profile-card { background: #272927; padding: 30px; border-radius: 15px; display: flex; align-items: center; gap: 30px; margin-bottom: 30px; border: 1px solid #363a36; }
 .profile-pic { width: 150px; height: 150px; border-radius: 50%; background: #4b4f4b; object-fit: cover; border: 3px solid #ffffff; }
 .sub-text { color: #aaa; }
 .bio { margin-top: 15px; }
 .skill-tag { background: #363a36; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; margin-right: 5px; display: inline-block; margin-top: 10px; }
 
-/* ── Dashboard ──────────────────────────── */
+
 .section-title { margin-bottom: 20px; }
 .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; }
 .stat-box { background: #272927; padding: 20px; border-radius: 10px; text-align: center; border-bottom: 4px solid #363a36; }
@@ -37,7 +33,6 @@ main { margin-top: 60px; width: 100%; padding: 40px; }
 .cat-label { padding-left: 10px; margin-bottom: 0; }
 .grid-display { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-top: 15px; }
 
-/* ── Entry cards ────────────────────────── */
 .entry-card { background: #272927; padding: 12px; border-radius: 10px; border: 1px solid #363a36; transition: 0.3s; }
 .entry-img { width: 100%; height: 130px; object-fit: cover; border-radius: 6px; margin-bottom: 10px; background: #111; cursor: zoom-in; }
 .entry-img:hover { opacity: 0.8; border: 1px solid bisque; }
@@ -47,11 +42,9 @@ main { margin-top: 60px; width: 100%; padding: 40px; }
 .file-name { font-size: 0.7rem; color: #666; margin-top: 4px; }
 .date-stamp { font-size: 0.7rem; color: #444; }
 
-/* ── Image modal ────────────────────────── */
 .modal { display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); justify-content: center; align-items: center; cursor: zoom-out; }
 .modal-content { max-width: 85%; max-height: 85%; border: 2px solid bisque; border-radius: 10px; }
 
-/* ── Upload forms ───────────────────────── */
 .upload-container { max-width: 600px; background: #272927; padding: 30px; border-radius: 12px; margin: 0 auto; border: 1px solid #363a36; }
 .form-group { margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
 .form-group label { font-size: 0.9rem; color: #aaa; margin-top: 5px; }
@@ -62,7 +55,6 @@ input[type="text"] { width: 100%; padding: 12px; background: #191b19; border: 1p
 .back-btn { background: #363a36; color: #aaa; border: none; padding: 7px 14px; border-radius: 6px; font-size: 0.82rem; cursor: pointer; transition: 0.2s; }
 .back-btn:hover { background: #444; color: white; }
 
-/* ── Category upload buttons ────────────── */
 .cat-header { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; }
 .upload-icon-btn { display: flex; align-items: center; gap: 6px; border: none; border-radius: 6px; padding: 5px 12px; font-size: 0.78rem; font-weight: bold; cursor: pointer; transition: 0.2s; opacity: 0.85; }
 .upload-icon-btn:hover { opacity: 1; transform: translateY(-1px); }
@@ -70,7 +62,7 @@ input[type="text"] { width: 100%; padding: 12px; background: #191b19; border: 1p
 .lab-icon { background: rgba(254,155,155,0.15); color: #fe9b9b; border: 1px solid rgba(254,155,155,0.3); }
 .exam-icon { background: rgba(160,250,173,0.15); color: #a0faad; border: 1px solid rgba(160,250,173,0.3); }
 
-/* ── Educational Background ─────────────── */
+
 .edu-section { margin-top: 30px; }
 .edu-timeline { display: flex; flex-direction: column; gap: 0; padding-left: 10px; border-left: 2px solid #363a36; margin-left: 10px; }
 .edu-entry { position: relative; padding: 0 0 28px 24px; }
@@ -81,5 +73,4 @@ input[type="text"] { width: 100%; padding: 12px; background: #191b19; border: 1p
 .edu-degree { color: #aaa; font-size: 0.85rem; margin-top: 2px; }
 .edu-desc { color: #666; font-size: 0.78rem; margin-top: 4px; font-style: italic; }
 
-/* ── Two column sections ─────────────────── */
 .two-col-sections { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
